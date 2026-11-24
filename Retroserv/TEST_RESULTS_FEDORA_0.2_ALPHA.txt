@@ -1,0 +1,26 @@
+Retroserv 0.2.0 alpha verification — 2026-10-28
+
+Verified in isolated Linux environment:
+- pytest: 34/34 tests pass
+- python -m compileall: pass
+- bash -n shell scripts: pass
+- graphical Tk app initialized in Xvfb virtual display: pass
+- new SMW Graphics tab present in GUI: pass
+- synthetic test LC_LZ2 streams: literal, RLE, word fill, incrementing fill,
+  long headers, overlapping backreferences, bounds and malformed streams: pass
+- synthetic test graphics pointer -> decompressor -> 3bpp -> PNG/BIN/JSON export: pass
+
+NOT verified:
+- Real Super Mario World ROM GFX extraction: no ROM bytes provided, only inspection JSON
+- Correct game color palette reconstruction: not implemented; previews synthetic grayscale
+- Real Fedora installation/upgrade of this alpha package: not tested on user's laptop
+- Cursor MCP handshake: not tested
+- GFX32/33: not implemented; GFX27 exported as raw binary without preview
+- Generic game scripts, level maps, code reconstruction: not implemented
+
+External published ROM fingerprint:
+SHA256 0838e531fe22c077528febe14cb3ff7c492f1f5fa8de354192bdff7137c27f5b
+CRC32  B19ED489
+Source: https://snescentral.com/article_test.php?id=0000
+
+Only original synthetic data is included in this archive.

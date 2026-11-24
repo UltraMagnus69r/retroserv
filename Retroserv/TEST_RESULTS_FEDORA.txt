@@ -1,0 +1,34 @@
+HISTORICAL: this document applies to Retroserv 0.1.2. See TEST_RESULTS_FEDORA_0.2_ALPHA.txt for current alpha.
+Retroserv 0.1.2 — Fedora-family Port Verification
+2026-10-28
+
+BUILD/TEST ENVIRONMENT
+- Isolated generic Linux container, Python 3.13.5, Tcl/Tk, Pillow, pytest, Xvfb.
+- NOT a Fedora laptop, Fedora Silverblue/Kinoite installation, or real Bazzite system.
+- Host environment has NO dnf / podman / Distrobox, so genuine installer package operations were NOT performed.
+
+TESTS RUN
+- python3 -m pytest -q : 27 passed.
+- bash -n all shell scripts: passed.
+- Fedora native launcher test: mocked Python entrypoint; verified argument forwarding, paths with spaces.
+- Fedora Atomic launcher test: mocked Distrobox entrypoint; verified argument forwarding, paths with spaces.
+- Installer ./Setup-Fedora.sh --check: native mode correctly selected in non-Atomic test environment.
+- Installer mode override and saved-mode selection: unit tested.
+- python3 -m retroserv --version -> Retroserv 0.1.2: passed.
+- python3 -m retroserv inspect on included synthetic ROM: passed.
+- CLI PNG export on included synthetic ROM: 64 x 64 RGBA PNG plus provenance JSON, passed.
+- GUI construction, tile preview, ASCII scan, candidate scan, hex viewer under Xvfb: passed.
+
+NOT VERIFIED
+- Running sudo dnf install on actual Fedora Workstation/KDE/Spins.
+- Native pip install -e on a user's Fedora laptop and its PyPI access.
+- Running/setup of Distrobox/Podman with actual Fedora Atomic system.
+- GUI on Fedora GNOME/KDE Wayland/XWayland without Xvfb.
+- Install-MCP SDK on the user's laptop and Cursor stdio handshake.
+- Any commercial SNES game or compressed/game-specific asset extraction.
+- Standalone RPM/Flatpak/AppImage packaging (not part of this release).
+
+CAUTION
+- 'Compatible scripts' are not a claim of end-to-end distribution validation.
+- ROM scanner is heuristic; automated reconstruction, dialogue decoding and
+  native SNES game building have NOT been implemented.

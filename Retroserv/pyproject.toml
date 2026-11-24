@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retroserv"
+version = "0.3.0a1+recovery.1"
+description = "Open-source SNES ROM inspection, asset exploration, and preservation tooling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Retroserv Contributors"}]
+dependencies = ["Pillow>=10,<13"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.28,<2"]
+cursor = ["cursor-sdk"]
+build = ["pyinstaller>=6,<7"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+retroserv = "retroserv.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["retroserv*"]
+
+[tool.setuptools.package-data]
+retroserv = ["retroserv.png", "assistants/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,19 @@
+{
+  "format": "retroserv-extraction-v1",
+  "type": "raw_snes_planar_tiles",
+  "verified_game_asset": false,
+  "source_name": "retroserv_test.sfc",
+  "source_sha256": "cd00b4ecab3d78ae5dda2f10dd3d66a53794f488cf523795fc314f1892d1d5dc",
+  "cartridge_sha256": "cd00b4ecab3d78ae5dda2f10dd3d66a53794f488cf523795fc314f1892d1d5dc",
+  "data_offset_hex": "0x12000",
+  "raw_file_offset_hex": "0x12000",
+  "data_length": 2048,
+  "bpp": 4,
+  "tile_count": 64,
+  "columns": 8,
+  "palette_data_offset_hex": "0x13000",
+  "palette": "ROM BGR555",
+  "transparent_index_0": false,
+  "output_file": "retroserv_preview.png",
+  "notice": "A decoded PNG does not by itself establish that this ROM range contains graphics."
+}

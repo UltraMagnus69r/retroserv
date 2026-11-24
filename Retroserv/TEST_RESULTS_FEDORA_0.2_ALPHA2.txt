@@ -1,0 +1,18 @@
+Retroserv 0.2.0-alpha.2 — Fedora Desktop file-dialog update
+
+Scope: ROM file-picker default directory only, plus release version metadata.
+
+Validation in Linux build container:
+- python -m pytest -q: 41 passed.
+- xvfb-run -a Python GUI smoke: RetroservGUI initialized, Open ROM called,
+  file-dialog initialdir matched desktop_paths.default_rom_directory().
+- python -m retroserv --version: Retroserv 0.2.0-alpha.2.
+- python -m retroserv inspect samples/retroserv_test.sfc: successful.
+- Path tests: standard ~/Desktop; redirected XDG Desktop; XDG desktop set
+  to home; no Desktop folder; missing XDG target; no shell execution.
+- Verified no changes to the bundled synthetic ROM content.
+
+Limits:
+- Fedora laptop's actual GUI file chooser not tested in this environment.
+- Desktop folders can be redirected via XDG config. If absent, home is used.
+- Existing SMW extraction is alpha quality and is unchanged in this patch.

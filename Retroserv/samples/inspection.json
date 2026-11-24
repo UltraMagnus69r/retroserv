@@ -1,0 +1,34 @@
+{
+  "tool": "Retroserv 0.1.2",
+  "source_file": "retroserv_test.sfc",
+  "size_bytes": 262144,
+  "data_bytes": 262144,
+  "copier_header_bytes": 0,
+  "sha256_original_file": "cd00b4ecab3d78ae5dda2f10dd3d66a53794f488cf523795fc314f1892d1d5dc",
+  "sha256_cartridge_data": "cd00b4ecab3d78ae5dda2f10dd3d66a53794f488cf523795fc314f1892d1d5dc",
+  "crc32_cartridge_data": "34BD5050",
+  "internal_header": {
+    "mapping": "LoROM",
+    "file_offset": 32704,
+    "score": 22,
+    "title": "RETROSERV TEST DATA",
+    "map_byte": 32,
+    "cartridge_type": 0,
+    "rom_size_code": 8,
+    "ram_size_code": 0,
+    "region_code": 1,
+    "maker_code": 0,
+    "revision": 0,
+    "checksum": 49969,
+    "complement": 15566,
+    "checksum_pair_valid": true,
+    "reset_vector": 32768,
+    "plausible_title": true
+  },
+  "header_confidence": "probable",
+  "notes": [
+    "Internal header detection is heuristic, not cartridge authentication.",
+    "Checksum pair validity does not establish complete ROM integrity.",
+    "All data offsets exclude any 512-byte copier header."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "format": "retroserv-assistant-v1",
+  "rom_sha256": "0838e531fe22c077528febe14cb3ff7c492f1f5fa8de354192bdff7137c27f5b",
+  "source": "",
+  "source_map_count": 0,
+  "rooms": {},
+  "changes": [
+    {
+      "id": "grass-diagonal-pipe-edges",
+      "kind": "map16-pointers",
+      "summary": "Grass diagonal pipe edges use the eight Map16 definitions that follow the common table.",
+      "target": "*",
+      "data": {
+        "tilesets": [0, 7, 12],
+        "pointers": {
+          "1C4": "0D8A70",
+          "1C5": "0D8A78",
+          "1C6": "0D8A80",
+          "1C7": "0D8A88",
+          "1EC": "0D8A90",
+          "1ED": "0D8A98",
+          "1EE": "0D8AA0",
+          "1EF": "0D8AA8"
+        }
+      }
+    }
+  ]
+}

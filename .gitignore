@@ -1,0 +1,23 @@
+# Recreated by Setup-Fedora.sh on each machine
+.venv/
+.venv-distrobox/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+*.spec
+.retroserv-install-mode
+
+# This desktop only
+.cursor/
+.claude/
+.directory
+
+# Commercial ROMs stay on the machine that owns them.
+# The synthetic sample is the only ROM stored here.
+*.sfc
+*.smc
+*.fig
+!Retroserv/samples/retroserv_test.sfc
